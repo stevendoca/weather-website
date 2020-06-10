@@ -4,6 +4,7 @@ const app = express ()
 const hbs = require('hbs')
 const foreCast = require('./utils/foreCast')
 const geoCode = require('./utils/geoCode')
+const port = process.env.PORT || 3000
 
 const partialsPath = path.join(__dirname, '../public/templates/partials')
 const publicDirectoryPath = path.join(__dirname,'../public/')
@@ -77,6 +78,6 @@ app.get ('*', (req, res) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log('server is up on port 3000')
+app.listen(port, () => {
+    console.log('server is up on port ' + port)
 })
