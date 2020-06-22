@@ -47,9 +47,8 @@ app.get ('/weather',(req, res) => {
                 return res.send({error})
             }
             res.send ({
-                location: r.des,
-                lattitude: r.la,
-                longitude: r.lo
+                location: data.des,
+                temperature: data.temp,
             })
         })
     })
